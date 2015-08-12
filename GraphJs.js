@@ -2,7 +2,7 @@ var fb = {
     config :{
         // CONFIG VARS:
 
-        app_id : '1422718977948094',
+        app_id : '884863301601302',
 
         use_xfbml : true,
 
@@ -14,6 +14,8 @@ var fb = {
 
         // END CONFIG VARS
     },
+
+
     perms : [],
     hasPerm : function (perm) { for(var i=0, l=fb.perms.length; i<l; i++) { if(fb.perms[i] == perm) {return true;}} return false; },
     logged : false,
