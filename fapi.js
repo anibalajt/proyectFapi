@@ -10,14 +10,15 @@ window.fbAsyncInit = function() {
             //   console.log(response);
             // });
             console.log(response.authResponse.userID)
+
             FB.api(
-                "/me/friends?fields",
-                function (response) {
-                    console.log(response)
-                  if (response && !response.error) {
-                    /* handle the result */
-                  }
-                }
+              '/me/friends',
+              'GET',
+              {},
+              function(respons) {
+                  console.log(respons)
+                  // Insert your code here
+              }
             );
             userIsLogged();
         } else {
