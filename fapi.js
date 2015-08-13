@@ -101,7 +101,7 @@ function facebookLogin(){
                 // El usuario ya esta logado Facebook pero la aplicación no está conectada a Facebook
                 userIsNotLogged();
             }
-            FB.login(facebookLoginCallBack,  { scope: 'id,name,first_name,last_name,age_range,link,gender,locale,timezone,updated_time,verified' })
+            FB.login(facebookLoginCallBack,  { scope: 'name,first_name,last_name,age_range,link,gender,locale,timezone,updated_time,verified' })
                 //{scope: 'user_likes,friends_likes,read_stream'});
         }
     });
