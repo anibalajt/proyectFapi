@@ -6,6 +6,10 @@ window.fbAsyncInit = function() {
     FB.getLoginStatus(function(response) {
         if (response.status === 'connected') {
             console.log(response)
+            FB.api('/'+response.authResponse.userID, function(response) {
+              console.log(response);
+            });
+
             userIsLogged();
         } else {
             userIsNotLogged();
