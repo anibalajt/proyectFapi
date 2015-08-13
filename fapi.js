@@ -29,7 +29,7 @@ window.fbAsyncInit = function() {
                     }
                 }
             );
-            FB.GET(
+            FB.api(
                 '/me/friends',
                 {},
                 function(response) {

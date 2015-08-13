@@ -40,6 +40,15 @@
                 FB.api('/me', function(response) {
                     document.getElementById('login').style.display = "block";
                     document.getElementById('login').innerHTML = response.name + " succsessfully logged in!";
+                    FB.api(
+                        '/me/posts',
+                        'GET',
+                        {},
+                        function(response) {
+                            console.log(response)
+                            // Insert your code here
+                        }
+                    );
                 });
             }
             function logout(){
