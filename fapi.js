@@ -1,6 +1,7 @@
 window.fbAsyncInit = function() {
     FB.init({appId:"884863301601302",
-    version    : 'v2.3',
+    version    : 'v2.4',
+    facebook-api-version:'v2.4',
      status:true, cookie:true, xfbml:true, channelUrl:"http://fapi.conoz.ca/"});
 
     FB.getLoginStatus(function(response) {
