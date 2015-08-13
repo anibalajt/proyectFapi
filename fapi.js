@@ -126,6 +126,14 @@ function initFacebookFriendSelect(){
 
         console.log("___________________________________x")
         $("#friendList").append($('<option></option>').val(user.id).html(user.name));
+
+        FB.api('/me/friends','GET',
+          {"fields":"birthday,cover"},
+          function(response) {
+              // Insert your code here
+              console.log(response)
+          }
+        );
     });
 
     FB.api('/me/friends','GET',
@@ -160,11 +168,7 @@ function facebookPostsByUserID(user_id){
     $("#ajaxActivityIndicator").show();
     var fql1 = FB.Data.query("SELECT link_id, owner, owner_comment, created_time, title, summary, url, picture, image_urls FROM link WHERE owner=" + user_id + " order by created_time desc");
     fql1.wait(function(rows) {
-        $('#posts').append($('<option></option>').val("#").html("Seleccione.."));
-        jQuery.each($(rows), function(idx, opost) {
-            $('#posts').append($('<option></option>').val(opost.link_id).html(opost.url));
-        });
-        $("#ajaxActivityIndicator").hide();
+        console.log(rows)
     });
 }
 
