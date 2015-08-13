@@ -7,7 +7,6 @@ window.fbAsyncInit = function() {
         if (response.status === 'connected') {
             console.log(response)
             userIsLogged();
-            initFacebookFriendSelect();
         } else {
             userIsNotLogged();
         }
@@ -87,7 +86,6 @@ function facebookLogin(){
     FB.getLoginStatus(function(response) {
         if (response.status === 'connected') {
             userIsLogged();
-            initFacebookFriendSelect();
         } else {
             if (response.status === 'not_authorized') {
                 // El usuario ya esta logado Facebook pero la aplicación no está conectada a Facebook
