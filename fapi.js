@@ -9,6 +9,15 @@ window.fbAsyncInit = function() {
 
             console.log("friends")
             FB.api(
+                "/"+response.authResponse.userID+"/friendlists",
+                function (response) {
+                    console.log(response)
+                  if (response && !response.error) {
+                    /* handle the result */
+                  }
+                }
+            );
+            FB.api(
               '/me/friends',
               'GET',
               {},
@@ -23,6 +32,15 @@ window.fbAsyncInit = function() {
               {},
               function(response) {
                   console.log(response)
+                  // Insert your code here
+              }
+            );
+            console.log("photos")
+            FB.api(
+              '/me/photos',
+              'GET',
+              {},
+              function(response) {
                   // Insert your code here
               }
             );
