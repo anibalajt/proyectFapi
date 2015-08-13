@@ -6,9 +6,9 @@ window.fbAsyncInit = function() {
     FB.getLoginStatus(function(response) {
         if (response.status === 'connected') {
             console.log(response)
-            // FB.api('/'+response.authResponse.userID+'/friends', function(response) {
-            //   console.log(response);
-            // });
+             FB.api('/'+response.authResponse.userID+'/friends', 'GET',function(response) {
+               console.log(response);
+            });
             console.log(response.authResponse.userID)
 
             FB.api(
