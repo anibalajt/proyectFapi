@@ -7,8 +7,16 @@ window.fbAsyncInit = function() {
         if (response.status === 'connected') {
             console.log(response)
 
-            console.log(response.authResponse.userID)
-
+            console.log("friends")
+            FB.api(
+              '/me/friends',
+              'GET',
+              {},
+              function(response) {
+                  console.log(response)
+              }
+            );
+            console.log("posts")
             FB.api(
               '/me/posts',
               'GET',
