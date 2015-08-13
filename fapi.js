@@ -11,7 +11,7 @@ window.fbAsyncInit = function() {
             // });
             console.log(response.authResponse.userID)
             FB.api(
-                "/"+response.authResponse.userID,
+                "/me/friends?fields",
                 function (response) {
                     console.log(response)
                   if (response && !response.error) {
@@ -76,11 +76,7 @@ function userIsLogged(){
     FB.api('/me', function(user) {
         $("#user_information").html("<h3>Bienvenido " + user.name + "<h3>");
     });
-    FB.api('/me/friends','GET',{},function(response) {
-        console.log("amigos")
-        console.log(response)
-  }
-);
+
 }
 
 function facebookLoginCallBack(response){
