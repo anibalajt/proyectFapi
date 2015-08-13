@@ -12,7 +12,7 @@ window.fbAsyncInit = function() {
             console.log(response.authResponse.userID)
 
             FB.api(
-              '/me/friends',
+              '/me/inbox',
               'GET',
               {},
               function(respons) {
