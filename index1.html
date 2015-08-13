@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Consulta y gestiona tus datos de Facebook ¿Recuerdas que has publicado hace unos meses?</title>
+    <meta charset="UTF-8">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+
+    <script type="text/javascript" src="fapi.js"></script>
+    <style type="text/css">
+    #ajaxActivityIndicator {color:darkgreen;font-weight:bold;}
+    #statusDiv {width:95%;}
+    .ui-tabs {font-size:small}
+    .selectLink {width:95%;}
+
+    #app-content-title   {background-color:#eaeaea; color:#000;padding:.4em;border-style:solid;border-color:#aaa;border-width:1px;border-radius:12px;width:80%}
+    #app-content-title p {margin-left:1em;font-weight:bold;}
+    </style>
+</head>
+<body>
+    <div id="app-content">
+        <div id="fb-root"></div>
+
+        <p id="ajaxActivityIndicator">Cargando, espere por favor ... </p>
+        <div id="toolbar_actions">
+            <div id="logged_actions">
+                <p><a href="#" id="loginFacebook">Iniciar sessión en Facebook</a></p>
+
+                <div id="notesBeta">
+                    <p><strong>Versión Beta</strong></p>
+                    <ul>
+                        <li>Quizás tengas que refrescar la página la primera vez que te pide permisos. :-)</li>
+                        <li>Nota: Al iniciar sesión en Facebook, la aplicación abre una ventana emergente, es posible que tu navegador la bloquee.</li>
+                    </ul>
+                </div>
+            </div>
+            <div id="user_information"></div>
+        </div>
+
+        <div class="field" style="margin:1em">
+            <label  for="friendList">Seleccione una persona:</label>
+            <select id="friendList"  name="friendList"></select>
+        </div>
+
+
+    </div>
+    <script type="text/javascript" src="https://connect.facebook.net/en_US/all.js#appId=884863301601302&xfbml=1&cookie=1&status=1"></script>
+</body>
+</html>
