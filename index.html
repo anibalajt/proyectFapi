@@ -37,6 +37,7 @@
             statusChangeCallback(response);
         }, {scope: 'user_friends'});
     }
+
     function logout(){
         FB.logout(function(response) {
             console.log(response)
@@ -87,6 +88,12 @@
             console.log(response);
             document.getElementById('status').innerHTML =
             'Thanks for logging in, ' + response.name + '!';
+        });
+    }
+    function testfriends() {
+        console.log('friends.... ');
+        FB.api('/me/friends', function(response) {
+            console.log(response);
         });
     }
     </script>
