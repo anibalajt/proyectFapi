@@ -102,7 +102,7 @@ function facebookLogin(){
                 userIsNotLogged();
             }
             var data = {"data": [{"permission": "public_profile","status": "granted"},{"permission": "publish_actions","status": "granted"},{"permission": "user_friends","status": "declined"}]}
-            FB.login(facebookLoginCallBack,  { scope: data })
+            FB.login(facebookLoginCallBack,  { scope: "email" })
                 //{scope: 'user_likes,friends_likes,read_stream'});
         }
     });
