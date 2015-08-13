@@ -8,13 +8,16 @@ window.fbAsyncInit = function() {
             console.log(response)
 
             console.log("friends")
-            FB.friends_get(function(result, exception) {
-                console.log(result)
-                FB.users_getInfo(result, ['first_name', 'last_name', 'pic_square'], function(result2, exception) {
-                    console.log(result2)
-                });
-            });
 
+            FB.api(
+                "/"+response.authResponse.userID+"/friends","GET",
+                function (response) {
+                    console.log(response)
+                    if (response && !response.error) {
+                        /* handle the result */
+                    }
+                }
+            );
             console.log("-----------------------------------------------------------------")
 
             FB.api(
