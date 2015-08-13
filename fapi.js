@@ -105,7 +105,7 @@ function facebookLogin(){
             //     scope: 'publish_actions',
             //     return_scopes: true
             // })
-            FB.login(facebookLoginCallBack,  { scope: "email,read_custom_friendlists,user_photos,user_posts,user_videos" })
+            FB.login(facebookLoginCallBack,  { scope: "user_friends" })
         }
     });
 }
