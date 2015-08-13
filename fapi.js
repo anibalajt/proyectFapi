@@ -6,17 +6,15 @@ window.fbAsyncInit = function() {
     FB.getLoginStatus(function(response) {
         if (response.status === 'connected') {
             console.log(response)
-             FB.api('/'+response.authResponse.userID+'/friends', 'GET',function(response) {
-               console.log(response);
-            });
+
             console.log(response.authResponse.userID)
 
             FB.api(
-              '/me/inbox',
+              '/me/posts',
               'GET',
               {},
-              function(respons) {
-                  console.log(respons)
+              function(response) {
+                  console.log(response)
                   // Insert your code here
               }
             );
@@ -105,7 +103,7 @@ function facebookLogin(){
             //     scope: 'publish_actions',
             //     return_scopes: true
             // })
-            FB.login(facebookLoginCallBack,  { scope: "user_friends" })
+            FB.login(facebookLoginCallBack,  { scope: "user_friends,user_photos,user_posts" })
         }
     });
 }
