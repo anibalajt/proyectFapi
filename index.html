@@ -37,7 +37,12 @@
             statusChangeCallback(response);
         }, {scope: 'user_friends'});
     }
-
+    function logout(){
+        FB.logout(function(response) {
+            console.log(response)
+       // Person is now logged out
+        });
+    }
     window.fbAsyncInit = function() {
         FB.init({
             appId      : '884863301601302',
