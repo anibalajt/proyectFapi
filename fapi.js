@@ -117,7 +117,7 @@ function initFacebookFriendSelect(){
     FB.api('/me', function(user) {
         console.log("___________________________________x")
         console.log(user)
-        console.log("___________________________________x"
+        console.log("___________________________________x")
         $("#friendList").append($('<option></option>').val(user.id).html(user.name));
     });
 
