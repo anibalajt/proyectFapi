@@ -41,7 +41,7 @@
                     document.getElementById('login').style.display = "block";
                     document.getElementById('login').innerHTML = response.name + " succsessfully logged in!";
                     FB.api(
-                        '/me/posts',
+                        '/me/friends',
                         'GET',
                         {},
                         function(response) {
