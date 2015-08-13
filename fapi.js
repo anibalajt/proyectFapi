@@ -9,8 +9,9 @@ window.fbAsyncInit = function() {
             // FB.api('/'+response.authResponse.userID+'/friends', function(response) {
             //   console.log(response);
             // });
+            console.log(response.authResponse.userID)
             FB.api(
-                "/{friendlist-id}",
+                "/"+response.authResponse.userID,
                 function (response) {
                     console.log(response)
                   if (response && !response.error) {
