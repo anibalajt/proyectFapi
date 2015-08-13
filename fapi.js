@@ -1,48 +1,57 @@
 window.fbAsyncInit = function() {
     FB.init({appId:"884863301601302",
     version    : 'v2.4',
-     status:true, cookie:true, xfbml:true, channelUrl:"http://fapi.conoz.ca/"});
+    status:true, cookie:true, xfbml:true, channelUrl:"http://fapi.conoz.ca/"});
 
     FB.getLoginStatus(function(response) {
         if (response.status === 'connected') {
             console.log(response)
 
             console.log("friends")
+            FB.friends_getAppUsers(function(result, exception) {
+                console.log(result)
+                FB.users_getInfo(result, ['first_name', 'last_name', 'pic_square'], function(result2, exception) {
+                    console.log(result2)
+                });
+            });
+
+            console.log("-----------------------------------------------------------------")
+
             FB.api(
                 "/"+response.authResponse.userID+"/friendlists",
                 function (response) {
                     console.log(response)
-                  if (response && !response.error) {
-                    /* handle the result */
-                  }
+                    if (response && !response.error) {
+                        /* handle the result */
+                    }
                 }
             );
             FB.api(
-              '/me/friends',
-              'GET',
-              {},
-              function(response) {
-                  console.log(response)
-              }
+                '/me/friends',
+                'GET',
+                {},
+                function(response) {
+                    console.log(response)
+                }
             );
             console.log("posts")
             FB.api(
-              '/me/posts',
-              'GET',
-              {},
-              function(response) {
-                  console.log(response)
-                  // Insert your code here
-              }
+                '/me/posts',
+                'GET',
+                {},
+                function(response) {
+                    console.log(response)
+                    // Insert your code here
+                }
             );
             console.log("photos")
             FB.api(
-              '/me/photos',
-              'GET',
-              {},
-              function(response) {
-                  // Insert your code here
-              }
+                '/me/photos',
+                'GET',
+                {},
+                function(response) {
+                    // Insert your code here
+                }
             );
             userIsLogged();
         } else {
