@@ -85,6 +85,7 @@ function userIsLogged(){
 
 function facebookLoginCallBack(response){
     if (response.status === 'connected') {
+        console.log(response)
         userIsLogged();
     } else if (response.status === 'not_authorized') {
         userIsNotLogged();
