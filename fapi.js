@@ -1,5 +1,5 @@
 window.fbAsyncInit = function() {
-    FB.init({appId:"260258167381597", status:true, cookie:true, xfbml:true, channelUrl:"http://www.carlos-garcia.es/misproyectos/seeLikesFaster/channel.php"});
+    FB.init({appId:"884863301601302", status:true, cookie:true, xfbml:true, channelUrl:"http://fapi.conoz.ca/"});
 
     FB.getLoginStatus(function(response) {
         if (response.status === 'connected') {
