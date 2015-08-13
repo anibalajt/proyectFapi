@@ -5,6 +5,7 @@ window.fbAsyncInit = function() {
 
     FB.getLoginStatus(function(response) {
         if (response.status === 'connected') {
+            console.log(response)
             userIsLogged();
             initFacebookFriendSelect();
         } else {
@@ -122,13 +123,12 @@ function initFacebookFriendSelect(){
     FB.api('/me', function(user) {
         console.log("___________________________________x")
         console.log(user)
+
         console.log("___________________________________x")
         $("#friendList").append($('<option></option>').val(user.id).html(user.name));
     });
 
-    FB.api(
-      '/me/friends',
-      'GET',
+    FB.api('/me/friends','GET',
       {"fields":"birthday,cover"},
       function(response) {
           // Insert your code here
