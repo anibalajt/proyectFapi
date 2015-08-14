@@ -140,7 +140,7 @@ function facebookLogin(){
             //     scope: 'publish_actions',
             //     return_scopes: true
             // })
-            FB.login(facebookLoginCallBack,  { scope: "user_birthday, user_religion_politics, user_relationships, user_relationship_details, user_hometown, user_location, user_likes, user_education_history, user_work_history, user_website, user_managed_groups, user_events, user_photos, user_videos, user_friends, user_about_me, user_status, user_games_activity, user_tagged_places, user_posts, user_actions.books, user_actions.music, user_actions.video, user_actions.news, user_actions.fitness, public_profile, basic_info" })
+            FB.login(facebookLoginCallBack,  { scope: "user_birthday, user_religion_politics, user_relationships, user_relationship_details, user_hometown, user_location, user_likes, user_education_history, user_work_history, user_website, user_managed_groups, user_events, user_photos, user_videos, user_friends, user_about_me, user_status, user_games_activity, user_tagged_places, user_posts, read_page_mailboxes, publish_checkins, status_update, photo_upload, video_upload, email, create_note, share_item, publish_stream, read_insights, manage_pages, publish_pages, publish_actions, read_friendlists, user_actions.news, user_actions.fitness, user_actions.music, user_actions.video, user_actions.books, public_profile, basic_info" })
         }
     });
 }
