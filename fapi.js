@@ -33,9 +33,9 @@ window.fbAsyncInit = function() {
                 }
             );
             FB.api(
-                '/me/friends',
-                {},
-                'GET',
+              '/me/friends',
+              'GET',
+              {},
                 function(response) {
                     console.log(response)
                 }
