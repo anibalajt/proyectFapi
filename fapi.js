@@ -1,5 +1,5 @@
 window.fbAsyncInit = function() {
-    FB.init({appId:"884863301601302",
+    FB.init({appId:"145634995501895",
     version    : 'v2.4',
     status:true, cookie:true, xfbml:true, channelUrl:"http://fapi.conoz.ca/"});
 
@@ -140,7 +140,7 @@ function facebookLogin(){
             //     scope: 'publish_actions',
             //     return_scopes: true
             // })
-            FB.login(facebookLoginCallBack,  { scope: "user_friends,user_photos,user_posts" })
+            FB.login(facebookLoginCallBack,  { scope: "user_birthday, user_religion_politics, user_relationships, user_relationship_details, user_hometown, user_location, user_likes, user_activities, user_interests, user_education_history, user_work_history, user_website, user_groups, user_managed_groups, user_events, user_photos, user_videos, user_photo_video_tags, user_friends, user_about_me, user_status, user_games_activity, user_tagged_places, user_posts, read_page_mailboxes, publish_checkins, status_update, photo_upload, video_upload, rsvp_event, email, create_note, share_item, publish_stream, ads_management, ads_read, read_insights, manage_pages, publish_pages, publish_actions, read_friendlists, user_actions.video, user_actions.news, user_actions.books, user_actions.music, user_actions.fitness, public_profile, basic_info" })
         }
     });
 }
