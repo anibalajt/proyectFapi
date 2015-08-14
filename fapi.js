@@ -2,7 +2,7 @@ window.fbAsyncInit = function() {
     FB.init({
         appId      : '884863301601302',
       xfbml      : true,
-      version    : 'v2.4'
+      version    : 'v2.4',
      channelUrl:"http://fapi.conoz.ca/"
 });
 
