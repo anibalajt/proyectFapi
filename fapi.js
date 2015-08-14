@@ -143,7 +143,7 @@ function facebookLogin(){
             //     scope: 'publish_actions',
             //     return_scopes: true
             // })
-            FB.login(facebookLoginCallBack,  { scope: "user_birthday, user_likes, user_photos, user_friends, user_posts, public_profile" })
+            FB.login(facebookLoginCallBack,  { scope: "user_photos, user_friends, user_posts, read_friendlists, public_profile, basic_info" })
         }
     });
 }
