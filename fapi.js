@@ -1,10 +1,10 @@
 window.fbAsyncInit = function() {
     FB.init({
         appId      : '884863301601302',
-      xfbml      : true,
-      version    : 'v2.4',
-     channelUrl:"http://fapi.conoz.ca/"
-});
+        xfbml      : true,
+        version    : 'v2.4',
+        channelUrl:"http://fapi.conoz.ca/"
+    });
 
     FB.getLoginStatus(function(response) {
         if (response.status === 'connected') {
@@ -43,9 +43,8 @@ window.fbAsyncInit = function() {
             FB.api(
                 '/me/posts',
                 'GET',
-                {},
+                {"fields":"actions,admin_creator,call_to_action,caption,child_attachments,application,coordinates,created_time,description,expanded_height,expanded_width,feed_targeting,from,full_picture,height,icon,id,link,message,message_tags,name,object_id,parent_id,picture,place,privacy,promotion_status,properties,scheduled_publish_time,shares,source,status_type,story,story_tags,subscribed,targeting,timeline_visibility,to,type,updated_time,via,width,with_tags,attachments"},
                 function(response) {
-                    console.log(response)
                     // Insert your code here
                 }
             );
